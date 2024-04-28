@@ -11,7 +11,8 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js"
+    "build-image": "node sharp.js",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Ryan Fathurrahman",
@@ -65,5 +66,10 @@
     "regenerator-runtime": "^0.14.0",
     "workbox-precaching": "^7.1.0",
     "workbox-window": "^7.1.0"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fnayR/resto-apps.git" 
   }
 }
