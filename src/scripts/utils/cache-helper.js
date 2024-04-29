@@ -9,7 +9,7 @@ const CacheHelper = {
   async deleteOldCache() {
     const cacheNames = await caches.keys();
     cacheNames
-      .filter((name) => name !== 'restoapps-cache')
+      .filter((name) => name !== CONFIG.CACHE_NAME)
       .map((filteredName) => caches.delete(filteredName));
   },
 
@@ -42,7 +42,6 @@ const CacheHelper = {
     const cache = await this._openCache();
     cache.add(request);
   },
-
 };
 
 export default CacheHelper;
